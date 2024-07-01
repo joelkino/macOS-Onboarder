@@ -5,7 +5,7 @@
     "moveable": false,
     "ontop": true,
     "width": "800",
-    "icon" : "/Library/Application Support/Microsoft/IntuneScripts/Swift dialog/Interconnekt_Logo.png",
+    "icon" : "/Library/Application Support/Microsoft/IntuneScripts/Swift dialog/icons/Interconnekt_Logo.png",
     "centreicon": false,
     "iconsize" : "100",
     "listitem" : [
