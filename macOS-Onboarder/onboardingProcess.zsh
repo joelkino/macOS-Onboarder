@@ -21,6 +21,7 @@
 
 # User Defined variables
 
+
 onboardingScriptsUrl="https://github.com/joelkino/macOS-Onboarder/blob/e7c32ad4d96d7ae2072f023704474155931367fc/macOS-Onboarder/onboarding_scripts.zip" # Enter your own URL here
 appname="onBoarding"                                                 
 logandmetadir="/Library/Application Support/Microsoft/IntuneScripts/$appname"   # The location of our logs and last updated data
