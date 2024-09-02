@@ -82,7 +82,6 @@ dockapps=(  "/System/Applications/Launchpad.app"
             "/Applications/Microsoft PowerPoint.app"
             "/Applications/Microsoft Teams.app"
             "/Applications/OneDrive.app"
-            "/System/Applications/System Preferences.app"
             "/System/Applications/$settingsApp")
 
 echo ""
@@ -104,7 +103,7 @@ function updateSplashScreen () {
 
 
     # Is Swift Dialog present
-    if [[ -a "/Library/Application Support/Dialog/Dialog.app/Contents/MacOS/Dialog" ]]; then
+    if [[ -a "/usr/local/bin/dialog" ]]; then
 
 
         echo "$(date) |     Updating Swift Dialog monitor for [$appname] to [$1]"
