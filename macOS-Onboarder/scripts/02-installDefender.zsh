@@ -29,7 +29,8 @@ waitForSplashScreen=true                                                        
 SplashScreenProcess="Dialog"                                                                # If we do wait for a splash screen, what's the process name? Octory | Dialog
 
 
-waitForTheseApps=(  "/Applications/Company Portal.app")
+waitForTheseApps=(  "/Applications/Microsoft Edge.app"
+                    "/Applications/Company Portal.app")
 
 # Generated variables
 tempdir=$(mktemp -d)
