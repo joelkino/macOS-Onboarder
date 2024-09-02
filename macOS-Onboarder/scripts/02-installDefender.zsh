@@ -968,7 +968,7 @@ function updateSplashScreen () {
 
 
     # Is Swift Dialog present
-    if [[ -a "/Library/Application Support/Dialog/Dialog.app/Contents/MacOS/Dialog" ]]; then
+    if [[ -a "/usr/local/bin/dialog" ]]; then
 
 
         echo "$(date) | Updating Swift Dialog monitor for [$appname] to [$1]"
@@ -999,16 +999,6 @@ function startLog() {
 
     exec > >(tee -a "$log") 2>&1
     
-}
-
-# function to delay until the user has finished setup assistant.
-waitForDesktop () {
-  until ps aux | grep /System/Library/CoreServices/Dock.app/Contents/MacOS/Dock | grep -v grep &>/dev/null; do
-    delay=$(( $RANDOM % 50 + 10 ))
-    echo "$(date) |  + Dock not running, waiting [$delay] seconds"
-    sleep $delay
-  done
-  echo "$(date) | Dock is here, lets carry on"
 }
 
 ###################################################################################
