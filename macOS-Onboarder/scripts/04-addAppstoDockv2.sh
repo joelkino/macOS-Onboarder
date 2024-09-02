@@ -103,7 +103,7 @@ function updateSplashScreen () {
 
 
     # Is Swift Dialog present
-    if [[ -a "/usr/local/bin/dialog" ]]; then
+    if [[ -a "/Library/Application Support/Dialog/Dialog.app" ]]; then
 
 
         echo "$(date) |     Updating Swift Dialog monitor for [$appname] to [$1]"
