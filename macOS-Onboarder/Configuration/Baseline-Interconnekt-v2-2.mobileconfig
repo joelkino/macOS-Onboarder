@@ -96,6 +96,16 @@
 					<key>Subtitle</key>
 					<string>Configuring your Dock</string>
 				</dict>
+				<dict>
+					<key>DisplayName</key>
+					<string>Interconnekt Remote Support Agent</string>
+					<key>Icon</key>
+					<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/Interconnekt_Logo.png</string>
+					<key>ScriptPath</key>
+					<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/scripts/05-InstallNinjaOneAgent.sh</string>
+					<key>Subtitle</key>
+					<string>Renaming your device</string>
+				</dict>				
 			</array>
 		</dict>
 	</array>
