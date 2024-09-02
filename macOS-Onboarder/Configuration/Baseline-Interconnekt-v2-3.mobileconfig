@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>DialogListOptions</key>
+			<string>--titlefont "name=Avenir Next, size=15" --messagefont "name=Avenir Next,size=13" --iconsize 400 --icon https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/Interconnekt_Logo.png --title "Welcome to the macOS Onboarder, by Interconnekt" --message "Feel free to step away, this could take 30 minutes or more. \n\nYour computer will restart when it's ready for use."  --width 1050 --height 800</string>
+			<key>ExitCondition</key>
+			<string>/Applications/Company Portal.app</string>
+			<key>Installomator</key>
+			<array>
+				<dict>
+					<key>DisplayName</key>
+					<string>Microsoft Edge</string>
+					<key>Icon</key>
+					<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/Edge.png</string>
+					<key>Label</key>
+					<string>microsoftedge</string>
+				</dict>
+				<dict>
+					<key>DisplayName</key>
+					<string>Microsoft Office</string>
+					<key>Icon</key>
+					<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/office.png</string>
+					<key>Label</key>
+					<string>microsoftofficebusinesspro</string>
+				</dict>
+				<dict>
+					<key>DisplayName</key>
+					<string>DockUtil</string>
+					<key>Icon</key>
+					<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/Settings.png</string>
+					<key>Label</key>
+					<string>dockutil</string>
+				</dict>
+			</array>
+			<key>InstallomatorSwiftDialogIntegration</key>
+			<true/>
+			<key>PayloadDisplayName</key>
+			<string>Baseline</string>
+			<key>PayloadIdentifier</key>
+			<string>com.secondsonconsulting.baseline.AA20B1D9-1CD6-4CCF-8477-242539BE8741</string>
+			<key>PayloadType</key>
+			<string>com.secondsonconsulting.baseline</string>
+			<key>PayloadUUID</key>
+			<string>FCBE9ACC-9107-493F-A6F1-0E59740DD5E2</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>ProgressBar</key>
+			<true/>
+			<key>ProgressBarDisplayNames</key>
+			<true/>
+			<key>Restart</key>
+			<false/>
+			<key>Scripts</key>
+			<array>
+				<dict>
+					<key>DisplayName</key>
+					<string>Company Portal</string>
+					<key>Icon</key>
+					<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/CompanyPortal.png</string>
+					<key>ScriptPath</key>
+					<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/scripts/01-installCompanyPortal.zsh</string>
+					<key>Subtitle</key>
+					<string>Installing the Micorosft Intune Company Portal app</string>
+				</dict>
+				<dict>
+					<key>DisplayName</key>
+					<string>Microsoft Defender</string>
+					<key>Icon</key>
+					<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/Defender.png</string>
+					<key>ScriptPath</key>
+					<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/scripts/02-installDefender.zsh</string>
+					<key>Subtitle</key>
+					<string>Installing Microsoft Defender and onboarding your device to Microsoft Defender for Business</string>
+				</dict>
+				<dict>
+					<key>DisplayName</key>
+					<string>Rename Device</string>
+					<key>Icon</key>
+					<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/Settings.png</string>
+					<key>ScriptPath</key>
+					<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/scripts/03-DeviceRename.sh</string>
+					<key>Subtitle</key>
+					<string>Renaming your device</string>
+				</dict>
+				<dict>
+					<key>DisplayName</key>
+					<string>Configure Dock</string>
+					<key>Icon</key>
+					<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/Settings.png</string>
+					<key>ScriptPath</key>
+					<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/scripts/04-addAppstoDockv2.sh</string>
+					<key>Subtitle</key>
+					<string>Configuring your Dock</string>
+				</dict>
+				<dict>
+					<key>DisplayName</key>
+					<string>Interconnekt Remote Support Agent</string>
+					<key>Icon</key>
+					<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/Interconnekt_Logo.png</string>
+					<key>ScriptPath</key>
+					<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/scripts/05-InstallNinjaOneAgent.sh</string>
+					<key>Subtitle</key>
+					<string>Onboarding your device to Interconnekt's Remote Support app</string>
+				</dict>
+			</array>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>This configures the Interconnekt macOS Onboarder - Baseline Configuration</string>
+	<key>PayloadDisplayName</key>
+	<string>macOS Onboarder - Baseline Configuration</string>
+	<key>PayloadIdentifier</key>
+	<string>Baseline-Interconnekt-v2.3</string>
+	<key>PayloadOrganization</key>
+	<string>Interconnekt</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>E4F57D04-F725-4063-B5FF-AA10B6019E9C</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+	<key>RemovalDate</key>
+	<date>2098-12-31T15:37:24Z</date>
+</dict>
+</plist>
