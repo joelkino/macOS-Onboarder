@@ -1,11 +1,12 @@
 #!/bin/bash
 #set -x
 
-############################################################################################
+#################################################################################################################
 ##
 ## Script to wait for apps to be installed and then configure the Mac Dock
+## Original Location: https://github.com/microsoft/shell-intune-samples/blob/master/macOS/Config/Dock/dockv5.sh
 ##
-###########################################
+#################################################################################################################
 
 ## Copyright (c) 2020 Microsoft Corp. All rights reserved.
 ## Scripts are not supported under any Microsoft standard support program or service. The scripts are provided AS IS without warranty of any kind.
