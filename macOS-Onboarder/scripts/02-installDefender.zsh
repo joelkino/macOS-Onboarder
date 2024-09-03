@@ -28,6 +28,12 @@ autoUpdate="true"                                                         # If t
 secondsToWaitForOtherApps=3600                                                               # How long should we wait for other apps to install before we continue?
 
 waitForTheseApps=(  "/Applications/Microsoft Edge.app"
+                    "/Applications/Microsoft Outlook.app"
+                    "/Applications/Microsoft Word.app"
+                    "/Applications/Microsoft Excel.app"
+                    "/Applications/Microsoft PowerPoint.app"
+                    "/Applications/Microsoft OneNote.app"
+                    "/Applications/Microsoft Teams.app"
                     "/Applications/Company Portal.app")
 
 # Generated variables
