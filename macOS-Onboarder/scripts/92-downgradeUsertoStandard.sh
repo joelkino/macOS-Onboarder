@@ -1,11 +1,12 @@
 #!/bin/zsh
 #set -x
 
-############################################################################################
+################################################################################################################################################
 ##
 ## Script to downgrade all users to Standard Users
+## Original Location: https://github.com/microsoft/shell-intune-samples/blob/master/macOS/Config/Manage%20Accounts/downgradeUsertoStandard.sh
 ##
-###########################################
+################################################################################################################################################
 
 ## Copyright (c) 2020 Microsoft Corp. All rights reserved.
 ## Scripts are not supported under any Microsoft standard support program or service. The scripts are provided AS IS without warranty of any kind.

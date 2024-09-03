@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
 #set -x
 
-############################################################################################
+################################################################################################################################################
 ##
 ## Script to create Local Admin Account for IT Use
+## Original Location: https://github.com/microsoft/shell-intune-samples/blob/master/macOS/Config/Manage%20Accounts/createLocalAdminAccount.sh
 ##
-###########################################
+##
+################################################################################################################################################
 
 ## Copyright (c) 2020 Microsoft Corp. All rights reserved.
 ## Scripts are not supported under any Microsoft standard support program or service. The scripts are provided AS IS without warranty of any kind.
@@ -28,8 +30,8 @@
 
 # Define variables
 
-adminaccountname="localadmin"       # This is the accountname of the new admin
-adminaccountfullname="Local Admin"  # This is the full name of the new admin user
+adminaccountname="interconnekt"       # This is the accountname of the new admin
+adminaccountfullname="Interconnekt Admin"  # This is the full name of the new admin user
 scriptname="Create Local Admin Account"
 logandmetadir="/Library/IntuneScripts/createLocalAdminAccount"
 log="$logandmetadir/createLocalAdminAccount.log"

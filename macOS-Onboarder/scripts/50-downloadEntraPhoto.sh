@@ -2,13 +2,12 @@
 Ver="2309.27"
 #set -x
 
-###################################################################################################################################
+######################################################################################################################################################
 ##
 ## Script to download the profile photo from entraID
-## Original Location: https://github.com/microsoft/shell-intune-samples/blob/master/macOS/Config/Dock/dockv5.sh
-## https://github.com/microsoft/shell-intune-samples/blob/master/macOS/Config/M365%20Profile%20Photo%20Sync/downloadEntraPhoto.sh
+## Original Location: https://github.com/microsoft/shell-intune-samples/blob/master/macOS/Config/M365%20Profile%20Photo%20Sync/downloadEntraPhoto.sh
 ##
-###################################################################################################################################
+######################################################################################################################################################
 
 ## Copyright (c) 2020 Microsoft Corp. All rights reserved.
 ## Scripts are not supported under any Microsoft standard support program or service. The scripts are provided AS IS without warranty of any kind.
