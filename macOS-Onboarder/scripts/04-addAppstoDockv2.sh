@@ -82,7 +82,7 @@ dockapps=(  "/System/Applications/Launchpad.app"
             "/Applications/Microsoft PowerPoint.app"
             "/Applications/Microsoft Teams.app"
             "/Applications/OneDrive.app"
-            "/System/Applications/$settingsApp")
+            "/System/$settingsApp")
 
 echo ""
 echo "##############################################################"
