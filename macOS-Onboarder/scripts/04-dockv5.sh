@@ -50,6 +50,7 @@ else
 fi
 
 dockapps=(  "/System/Applications/Launchpad.app"
+            "/Applications/Company Portal.app"
             "/Applications/Microsoft Edge.app"
             "/Applications/Microsoft Outlook.app"
             "/Applications/Microsoft Word.app"
@@ -57,11 +58,8 @@ dockapps=(  "/System/Applications/Launchpad.app"
             "/Applications/Microsoft PowerPoint.app"
             "/Applications/Microsoft OneNote.app"
             "/Applications/Microsoft Teams.app"
-            "/Applications/Visual Studio Code.app"
-            "/Applications/Company Portal.app"
             "/Library/Application Support/Microsoft/MAU2.0/Microsoft AutoUpdate.app"
             "/System/Applications/App Store.app"
-            "/System/Applications/Utilities/Terminal.app"
             "/System/Applications/$settingsApp")
 
 install_dockutil_if_missing() {
