@@ -26,11 +26,12 @@
 ## WARNING: This script could leave your Mac will no Admin accounts configured at all
 
 # Define variables
-
+useraccount=interconnekt   ## Change the name of the Admin Account that you wish to be bypassed from the downgrading process (ie remains Adminstrator)
 scriptname="Downgrade Admin Users to Standard"
 log="/var/log/downgradeadminusers.log"
-abmcheck=false   # Only downgrade users if this device is ABM managed
+abmcheck=false   # Only downgrade users if this device is ABM managed ### Have set this to false as it was not working when true even on ABM managed devices
 downgrade=true  # If set to false, script will not do anything
+
 logandmetadir="/Library/Logs/Microsoft/IntuneScripts/downgradeAdminUsers"
 log="$logandmetadir/downgradeAdminUsers.log"
 
@@ -81,8 +82,8 @@ fi
 
 if [[ $downgrade = true ]]; then
   while read useraccount; do
-    if [[ "$useraccount" == "admin" ]]; then
-        echo "Leaving admin account as Admin"
+    if [[ "$useraccount" == "interconnekt" ]]; then
+        echo "Leaving interconnekt account as Admin"
     else
         echo "Making $useraccount a normal user"
         #/usr/sbin/dseditgroup -o edit -d $useraccount -t user admin
