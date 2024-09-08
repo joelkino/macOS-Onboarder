@@ -177,8 +177,8 @@ swiftDialogMinimumRequiredVersion="2.4.0"                                       
 deferralTimer=300                                                               # Time given to the user to respond to deferral prompt if enabled
 deferralTimerAction="Defer"                                                     # What happens when the deferral timer expires [ Defer | Continue ]
 daysUntilReset=7																# The number of days until the activator resets the patching status to False
-patchWeekStartDay=""															# Patch Week Start Day of Week (1-7, blank to disable): The day of week to set the start date for weekly patching: (1=Mon 2=Tue...7=Sun)
-maxDisplayAssertionCount=""														# The maximum number of deferred attempts from Display Assertions (Integer, blank to disable)
+patchWeekStartDay="2"															# Patch Week Start Day of Week (1-7, blank to disable): The day of week to set the start date for weekly patching: (1=Mon 2=Tue...7=Sun)
+maxDisplayAssertionCount="3"													# The maximum number of deferred attempts from Display Assertions (Integer, blank to disable)
 selfServicePatchingStatusModeReset="1"                                          # Determines if weekly patching status should be set to true when running in Self Service mode (deferrals disabled) [1=Never, 2=Always, 3=On Success (no errors)]
 
 ignoreDNDApps=""                                                                # Comma separated list of app names to ignore when evaluating DND (ex: ignoreDNDApps="firefox,Google Chrome,Safari,Amphetamine,caffeinate")
@@ -203,7 +203,7 @@ fragmentsPath="$installomatorPath/fragments"
 
 runDiscovery="true"                                                             # Re-run discovery of installed applications [ true (default) | false ]
 removeInstallomatorPath="false"                                                 # Remove Installomator after App Auto-Patch is completed [ true | false (default) ]
-convertAppsInHomeFolder="true"                                                  # Remove apps in /Users/* and install them to do default path [ true (default) | false ]
+convertAppsInHomeFolder="false"                                                 # Remove apps in /Users/* and install them to do default path [ true (default) | false ]
 ignoreAppsInHomeFolder="false"                                                  # Ignore apps found in '/Users/*'. If an update is found in '/Users/*' and variable is set to `false`, the app will be updated into the application's default path [ true | false (default) ]
 useLatestAvailableInstallomatorScriptVersion="true"                             # Will compare the VERSIONDATE of the local Installomator script against the VERSIONDATE of the latest available on GitHub, if they don't match, AAP will download and replace the local Installomator script with the latest
 
