@@ -298,10 +298,10 @@ fi
 
 ### Support Team Details ###
 
-supportTeamName="Add IT Support"
-supportTeamPhone="Add IT Phone Number"
-supportTeamEmail="Add email"
-supportTeamWebsite="Add IT Help site"
+supportTeamName="Interconnekt Support"
+supportTeamPhone="1300 852 842"
+supportTeamEmail="support@interconnekt.com.au"
+supportTeamWebsite="portal.interconnekt.com.au"
 supportTeamHyperlink="[${supportTeamWebsite}](https://${supportTeamWebsite})"
 
 # Create the help message based on Support Team variables
