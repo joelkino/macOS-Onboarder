@@ -146,7 +146,7 @@ ignoredLabels="${5:="microsoftedge,microsoftofficebusinesspro,microsoftcompanypo
 requiredLabels="${6:=""}"                                                       # Parameter 6: A space-separated list of required Installomator labels (i.e., "firefoxpkg_intl")
 optionalLabels="${7:=""}"                                                       # Parameter 7: A space-separated list of optional Installomator labels (i.e., "renew") ** Does not support wildcards **
 installomatorOptions="${8:-""}"                                                 # Parameter 8: A space-separated list of options to override default Installomator options (i.e., BLOCKING_PROCESS_ACTION=prompt_user NOTIFY=silent LOGO=appstore)
-maxDeferrals="${9:-"Disabled"}"                                                 # Parameter 9: Number of times a user is allowed to defer before being forced to install updates. A value of "Disabled" will not display the deferral prompt. [ `integer` | Disabled (default) ]
+maxDeferrals="${9:-"3"}"                                                        # Parameter 9: Number of times a user is allowed to defer before being forced to install updates. A value of "Disabled" will not display the deferral prompt. [ `integer` | Disabled (default) ]
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Various Feature Variables
