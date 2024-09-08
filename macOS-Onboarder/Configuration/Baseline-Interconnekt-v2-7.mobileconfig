@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>DialogFailureOptions</key>
+			<string>--liststyle compact \
+--titlefont "name=Avenir Next, size=30" \
+--messagefont "name=Avenir Next, size=14, weight=300, weight=light" \
+--iconsize 300 \
+--icon "SF=cexclamationmark.triangle.fill, color=yellow" \
+--messagealignment center
+</string>
+			<key>DialogListOptions</key>
+			<string>--liststyle compact \
+--bannerimage "https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/Banner/Banner.png" \
+--titlefont "name=Avenir Next, size=30" \
+--messagefont "name=Avenir Next, size=14, weight=300, weight=thin" \
+--iconsize 100 \
+--icon "https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/Interconnekt_Logo.png" \
+--bannertitle "Welcome to the macOS Onboarder, by Interconnekt" \
+--message "Feel free to step away, this could take 30 minutes or more. \n\nYour computer will restart when it's ready for use." \
+--messagealignment center \
+--width 1050 \
+--height 800
+</string>
+			<key>DialogSuccessOptions</key>
+			<string>--liststyle compact \
+--titlefont "name=Avenir Next, size=30" \
+--messagefont "name=Avenir Next, size=14, weight=300, weight=thin" \
+--iconsize 100 \
+--icon "SF=checkmark.circle, color=green" \
+--messagealignment center
+</string>
+			<key>ExitCondition</key>
+			<string>/Applications/Company Portal.app</string>
+			<key>Installomator</key>
+			<array>
+				<dict>
+					<key>DisplayName</key>
+					<string>Microsoft Edge</string>
+					<key>Icon</key>
+					<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/Edge.png</string>
+					<key>Label</key>
+					<string>microsoftedge</string>
+					<key>Subtitle</key>
+					<string>Microsoft Edge is a modern and secure browser based on the same Chromium Engine as Google Chrome</string>
+				</dict>
+				<dict>
+					<key>DisplayName</key>
+					<string>Microsoft Office</string>
+					<key>Icon</key>
+					<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/office.png</string>
+					<key>Label</key>
+					<string>microsoftofficebusinesspro</string>
+					<key>Subtitle</key>
+					<string>Microsoft Office is your business productivity suite</string>
+				</dict>
+				<dict>
+					<key>DisplayName</key>
+					<string>Dock Utility</string>
+					<key>Icon</key>
+					<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/Settings.png</string>
+					<key>Label</key>
+					<string>dockutil</string>
+					<key>Subtitle</key>
+					<string>So we can configure your Dock with all your business apps</string>
+				</dict>
+				<dict>
+					<key>DisplayName</key>
+					<string>Nudge</string>
+					<key>Icon</key>
+					<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/NudgeIcon.png</string>
+					<key>Label</key>
+					<string>nudge</string>
+					<key>Subtitle</key>
+					<string>Nudge is a tool provides interactive prompts to users to help keep their machine up to date</string>
+				</dict>
+				<dict>
+					<key>DisplayName</key>
+					<string>The Unarchiver</string>
+					<key>Icon</key>
+					<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/unarchiver.png</string>
+					<key>Label</key>
+					<string>theunarchiver</string>
+					<key>Subtitle</key>
+					<string>The Unarchiver is the only app you need to open RAR on Mac. It’s times more powerful than the native macOS utility and supports infinitely more archive formats.</string>
+				</dict>
+			</array>
+			<key>InstallomatorSwiftDialogIntegration</key>
+			<true/>
+			<key>PayloadDisplayName</key>
+			<string>Baseline</string>
+			<key>PayloadIdentifier</key>
+			<string>com.secondsonconsulting.baseline.AA20B1D9-1CD6-4CCF-8477-242539BE8741</string>
+			<key>PayloadType</key>
+			<string>com.secondsonconsulting.baseline</string>
+			<key>PayloadUUID</key>
+			<string>CBA27A40-071B-441E-B2C3-E6EF884C73DA</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>ProgressBar</key>
+			<true/>
+			<key>ProgressBarDisplayNames</key>
+			<true/>
+			<key>Restart</key>
+			<false/>
+			<key>Scripts</key>
+			<array>
+				<dict>
+					<key>DisplayName</key>
+					<string>Company Portal</string>
+					<key>Icon</key>
+					<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/CompanyPortal.png</string>
+					<key>ScriptPath</key>
+					<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/scripts/01-installCompanyPortal.zsh</string>
+					<key>Subtitle</key>
+					<string>Installing the Micorosft Intune Company Portal app</string>
+				</dict>
+				<dict>
+					<key>DisplayName</key>
+					<string>Rename Device</string>
+					<key>Icon</key>
+					<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/Settings.png</string>
+					<key>ScriptPath</key>
+					<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/scripts/03-DeviceRename.sh</string>
+					<key>Subtitle</key>
+					<string>Renaming your device</string>
+				</dict>
+				<dict>
+					<key>DisplayName</key>
+					<string>Configure Dock</string>
+					<key>Icon</key>
+					<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/Settings.png</string>
+					<key>ScriptPath</key>
+					<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/scripts/04-dockv5.sh</string>
+					<key>Subtitle</key>
+					<string>Configuring your Dock</string>
+				</dict>
+				<dict>
+					<key>DisplayName</key>
+					<string>Interconnekt Remote Support Agent</string>
+					<key>Icon</key>
+					<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/Interconnekt_Logo.png</string>
+					<key>ScriptPath</key>
+					<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/scripts/05-InstallNinjaOneAgent.sh</string>
+					<key>Subtitle</key>
+					<string>Onboarding your device to Interconnekt's Remote Support app</string>
+				</dict>
+				<dict>
+					<key>DisplayName</key>
+					<string>Microsoft Defender</string>
+					<key>Icon</key>
+					<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/Defender.png</string>
+					<key>ScriptPath</key>
+					<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/scripts/06-installDefender.zsh</string>
+					<key>Subtitle</key>
+					<string>Installing Microsoft Defender and onboarding your device to Microsoft Defender for Business</string>
+				</dict>
+				<dict>
+					<key>DisplayName</key>
+					<string>Show Filename Extensions in Finder</string>
+					<key>Icon</key>
+					<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/Settings.png</string>
+					<key>ScriptPath</key>
+					<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/scripts/30-ShowAllFilenameExtensions.zsh</string>
+					<key>Subtitle</key>
+					<string>Turning on Filename Extensions in Finder</string>
+				</dict>
+				<dict>
+					<key>DisplayName</key>
+					<string>Enable OneDrive Finder Integration</string>
+					<key>Icon</key>
+					<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/Settings.png</string>
+					<key>ScriptPath</key>
+					<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/scripts/31-EnableOneDriveFinderSync.sh</string>
+				</dict>
+				<dict>
+					<key>DisplayName</key>
+					<string>Secure User's Home Folders</string>
+					<key>Icon</key>
+					<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/Settings.png</string>
+					<key>ScriptPath</key>
+					<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/scripts/40-SecureUsersHomeFolders.zsh</string>
+					<key>Subtitle</key>
+					<string>Securing your Home Folder</string>
+				</dict>
+				<dict>
+					<key>DisplayName</key>
+					<string>Enable Apple Mobile File Integrity</string>
+					<key>Icon</key>
+					<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/Settings.png</string>
+					<key>ScriptPath</key>
+					<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/scripts/41-EnableAppleMobileFileIntegrityAMFI.zsh</string>
+				</dict>
+				<dict>
+					<key>DisplayName</key>
+					<string>Sync User Profile Picutre from Microsoft 365 </string>
+					<key>Icon</key>
+					<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/Settings.png</string>
+					<key>ScriptPath</key>
+					<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/scripts/50-downloadEntraPhoto.sh</string>
+					<key>Subtitle</key>
+					<string>Check Microsoft 365 and sync your Profile Picture if it exists</string>
+				</dict>
+				<dict>
+					<key>DisplayName</key>
+					<string>Create IT Admin Account</string>
+					<key>Icon</key>
+					<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/Settings.png</string>
+					<key>ScriptPath</key>
+					<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/scripts/91-createLocalAdminAccount.sh</string>
+					<key>Subtitle</key>
+					<string>Create IT Admin account</string>
+				</dict>
+				<dict>
+					<key>DisplayName</key>
+					<string>Change IT Admin Password</string>
+					<key>Icon</key>
+					<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/Settings.png</string>
+					<key>ScriptPath</key>
+					<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/scripts/92-serialToAdminPassword.sh</string>
+				</dict>
+				<dict>
+					<key>DisplayName</key>
+					<string>Downgrade User Priveleges to Standard User</string>
+					<key>Icon</key>
+					<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/Settings.png</string>
+					<key>ScriptPath</key>
+					<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/scripts/93-downgradeUsertoStandard.sh</string>
+					<key>Subtitle</key>
+					<string>We will remove Admin Rights from your account to keep you protected from threats</string>
+				</dict>
+			</array>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>This configures the Interconnekt macOS Onboarder - Baseline Configuration</string>
+	<key>PayloadDisplayName</key>
+	<string>macOS Onboarder - Baseline Configuration</string>
+	<key>PayloadIdentifier</key>
+	<string>Baseline-Interconnekt-v2.3</string>
+	<key>PayloadOrganization</key>
+	<string>Interconnekt</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>353EBD16-0564-4916-9D7D-5EE1CCEB721A</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+	<key>RemovalDate</key>
+	<date>2098-12-31T15:37:24Z</date>
+</dict>
+</plist>
