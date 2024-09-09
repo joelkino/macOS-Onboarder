@@ -4,6 +4,8 @@
 #
 ######################################################################
 # This script can be used to install Baseline directly from GitHub.
+# It then attempts to match the AccountDisplayName value from the com.apple.extensiblesso.plist 
+# with a Tenant by matching it with an entry from the Tenant-Matching-List.json file 
 ######################################################################
 #
 #  This script was adapted from Søren Theilgaard's Script
@@ -22,13 +24,62 @@ scriptVersion="1.2"
 
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin
 
+
+######################################################################
+# Set Variables here
+######################################################################
 # Base URL for raw content from the repository
-BASEREPO_RAWURL="https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder" # Replace with actual base URL
+BASEREPO_RAWURL="https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder"           # Replace with actual base URL
+# Constants, logging and caffeinate
+log_message="Baseline install, v$scriptVersion"
+label="Inst-v$scriptVersion"
 
+######################################################################
+# SECTION 1: Multi-tenant config downloader script
+######################################################################
 
-########################
+# Step 1: Read the value for AccountDisplayName from com.apple.extensiblesso plist
+PLATFORM_SSO_PLIST="/Library/Managed Preferences/com.apple.extensiblesso.plist"
+ACCOUNT_DISPLAY_NAME=$(defaults read "$PLATFORM_SSO_PLIST" "AccountDisplayName")
 
-# MARK: Constants, logging and caffeinate
+## Check if AccountDisplayName is empty
+if [ -z "$AccountDisplayName" ]; then
+  echo "AccountDisplayName not found."
+  exit 1
+fi
+
+# Step 2: Compare AccountDisplayName against the JSON entries
+## Set the path for JSON_FILE
+JSON_FILE="$BASEREPO_RAWURL/Configuration/Tenant-Plists/Tenant-Matching-List.json"
+TENANT=$(grep -A 1 "\"AccountDisplayName\": \"$ACCOUNT_DISPLAY_NAME\"" "$JSON_FILE" | grep "TenantName" | awk -F ': ' '{print $2}' | tr -d '",')
+
+# Check if TENANT is empty
+if [ -z "$TENANT" ]; then
+  echo "AccountDisplayName does not match any valid tenants."
+  exit 1
+fi
+
+# Step 3: Determine the URL for the specific plist file based on TENANT
+BASE_URL="$BASEREPO_RAWURL/Configuration/Tenant-Plists"
+PLIST_URL="$BASE_URL/$TENANT.plist"
+
+# Step 5: Download the specific plist file
+DOWNLOAD_PATH="/Library/Managed Preferences/com.secondsonconsulting.baseline.plist"
+curl -o "$DOWNLOAD_PATH" "$PLIST_URL"
+
+# Check if the download was successful
+if [ $? -ne 0 ]; then
+  echo "Failed to download the plist file from $PLIST_URL."
+  exit 1
+fi
+
+echo "Successfully downloaded the plist file to $DOWNLOAD_PATH."
+
+######################################################################
+# SECTION 2: Download and Run Baseline.sh
+######################################################################
+
+# Constants, logging and caffeinate
 log_message="Baseline install, v$scriptVersion"
 label="Inst-v$scriptVersion"
 
@@ -127,7 +178,7 @@ if [[ ! -e "${destFile}" || "$currentInstalledVersion" != "$appNewVersion" ]]; t
                 sleep 2
             fi
         else
-            printlog "Download and install of $name succes."
+            printlog "Download and install of $name successful."
         fi
     done
     # Remove the temporary working directory
@@ -146,50 +197,4 @@ fi
 
 caffexit 0
 
-##################################
-
-# Function to download the latest baseline.sh script
-download_baseline_script() {
-    echo "Downloading the latest baseline.sh script..."
-    curl -L -o baseline.sh https://raw.githubusercontent.com/secondson/baseline/main/baseline.sh
-    if [ $? -ne 0 ]; then
-        echo "Failed to download baseline.sh script."
-        exit 1
-    fi
-    echo "Downloaded baseline.sh script successfully."
-}
-
-# Function to determine the AccountDisplayName
-get_account_display_name() {
-    # Placeholder logic to determine AccountDisplayName
-    # Replace this with the actual logic to get AccountDisplayName
-    echo "exampleTenant"
-}
-
-# Function to download the tenant config file
-download_tenant_config() {
-    AccountDisplayName="$1"
-    echo "Downloading the config file for tenant: $AccountDisplayName..."
-    config_url="${BASEREPO_RAWURL}/${AccountDisplayName}.config"
-    curl -L -o tenant.config "$config_url"
-    if [ $? -ne 0 ]; then
-        echo "Failed to download tenant config file."
-        exit 1
-    fi
-    echo "Downloaded tenant config file successfully."
-}
-
-# Main script execution
-main() {
-    # Download the latest baseline.sh script
-    download_baseline_script
-
-    # Determine the AccountDisplayName
-    AccountDisplayName=$(get_account_display_name)
-
-    # Download the tenant config file
-    download_tenant_config "$AccountDisplayName"
-}
-
-# Run the main function
-main
+######################################################################
