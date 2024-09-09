@@ -38,13 +38,14 @@ label="Inst-v$scriptVersion"
 
 # Step 1: Read the value for AccountDisplayName from com.apple.extensiblesso plist
 PLATFORM_SSO_PLIST="/Library/Managed Preferences/com.apple.extensiblesso.plist"
-ACCOUNT_DISPLAY_NAME=$(defaults read "$PLATFORM_SSO_PLIST" "AccountDisplayName")
 
-## Check if AccountDisplayName is empty
-if [ -z "$AccountDisplayName" ]; then
-  echo "AccountDisplayName not found."
-  exit 1
-fi
+# Read the PlatformSSO array from the plist file
+platform_sso=$(defaults read "$PLATFORM_SSO_PLIST" PlatformSSO)
+
+# Convert the plist output to XML format and extract AccountDisplayName
+ACCOUNT_DISPLAY_NAME=$(echo "$platform_sso" | plutil -convert xml1 -o - - | xmllint --xpath "string(//key[.='AccountDisplayName']/following-sibling::string[1])" -)
+
+echo "AccountDisplayName: $ACCOUNT_DISPLAY_NAME"
 
 # Step 2: Compare AccountDisplayName against the JSON entries
 ## Set the path for JSON_FILE
