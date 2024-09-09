@@ -38,7 +38,7 @@ fi
 echo "Successfully downloaded the plist file to $DOWNLOAD_PATH."
 
 # Step 6: Run baseline pointing to the downloaded config file
-BASELINE_COMMAND="/path/to/baseline/executable"  # Replace with the actual command or script to run the baseline
+BASELINE_COMMAND="/usr/local/Baseline/Baseline.sh"  # Replace with the actual command or script to run the baseline
 "$BASELINE_COMMAND" --config "$DOWNLOAD_PATH"
 
 # Check if the baseline command was successful
@@ -60,3 +60,14 @@ if [ $? -ne 0 ]; then
 fi
 
 echo "Successfully terminated the baseline session."
+
+# Step 7: Run baseline again with downloaded plist file
+"$BASELINE_COMMAND" --config "$DOWNLOAD_PATH"
+
+# Check if the baseline command was successful
+if [ $? -ne 0 ]; then
+  echo "Failed to run the baseline again with the config file $DOWNLOAD_PATH."
+  exit 1
+fi
+
+echo "Successfully ran the baseline again with the config file $DOWNLOAD_PATH."
