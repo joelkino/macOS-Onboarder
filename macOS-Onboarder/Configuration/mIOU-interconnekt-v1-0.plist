@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>DialogFailureOptions</key>
+	<string>--titlefont "size=25" \
+--bannerimage "https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/Banner/Banner.png" \
+--bannerheight 130 \
+--bannertitle "Onboarding Completed, but with Errors" \
+--messagefont "size=14" \
+--message "Please contact IT Support on 1300 852 842 for further assistance." \
+--iconsize 100 \
+--alignment center \
+--width 1050</string>
+	<key>DialogListOptions</key>
+	<string>--liststyle compact \
+--bannerimage "https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/Banner/Banner.png" \
+--bannerheight 130 \
+--titlefont "size=25" \
+--iconsize 100 --icon "https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/Interconnekt_Logo.png" \
+--bannertitle "Welcome to the macOS Intune Onboarding Utility" \
+--messagefont "size=14" \
+--message "Please wait whilst we configure your device. Feel free to step away, this could take 30 minutes or more." \
+--messagealignment center \
+--width 1050 \
+--height 800</string>
+	<key>DialogSuccessOptions</key>
+	<string>--titlefont "size=25" \
+--bannerimage "https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/Banner/Banner.png" \
+--bannerheight 130 \
+--bannertitle "Onboarding Complete!" \
+--messagefont "size=14" \
+--message "Thank you for waiting. Your device is now ready for use." \
+--iconsize 100 \
+--alignment center \
+--width 1050</string>
+	<key>ExitCondition</key>
+	<string>/Applications/Company Portal.app</string>
+	<key>Installomator</key>
+	<array>
+		<dict>
+			<key>DisplayName</key>
+			<string>Microsoft Edge</string>
+			<key>Icon</key>
+			<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/Edge.png</string>
+			<key>Label</key>
+			<string>microsoftedge</string>
+			<key>Subtitle</key>
+			<string>Microsoft Edge is a modern and secure browser based on the same Chromium Engine as Google Chrome</string>
+		</dict>
+		<dict>
+			<key>DisplayName</key>
+			<string>Microsoft Office</string>
+			<key>Icon</key>
+			<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/office.png</string>
+			<key>Label</key>
+			<string>microsoftofficebusinesspro</string>
+			<key>Subtitle</key>
+			<string>Microsoft Office is your business productivity suite</string>
+		</dict>
+		<dict>
+			<key>DisplayName</key>
+			<string>Apple SF Symbols</string>
+			<key>Icon</key>
+			<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/sf-symbols-beta.png</string>
+			<key>Label</key>
+			<string>applesfsymbols</string>
+			<key>Subtitle</key>
+			<string>Apple Native Symbols Icon Set</string>
+		</dict>
+		<dict>
+			<key>DisplayName</key>
+			<string>Discord</string>
+			<key>Icon</key>
+			<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/discord.png</string>
+			<key>Label</key>
+			<string>discord</string>
+			<key>Subtitle</key>
+			<string>Discord is a Communications Platform</string>
+		</dict>
+		<dict>
+			<key>DisplayName</key>
+			<string>Dock Utility</string>
+			<key>Icon</key>
+			<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/Settings.png</string>
+			<key>Label</key>
+			<string>dockutil</string>
+			<key>Subtitle</key>
+			<string>So we can configure your Dock with all your business apps</string>
+		</dict>
+		<dict>
+			<key>DisplayName</key>
+			<string>Fantastical</string>
+			<key>Icon</key>
+			<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/fantastical-mac-glyph.png</string>
+			<key>Label</key>
+			<string>fantastical</string>
+			<key>Subtitle</key>
+			<string>A Fantastic macOS Calendar App</string>
+		</dict>
+		<dict>
+			<key>DisplayName</key>
+			<string>iMazing Profile Editor</string>
+			<key>Icon</key>
+			<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/imazingprofileeditor.png</string>
+			<key>Label</key>
+			<string>imazingprofileeditor</string>
+			<key>Subtitle</key>
+			<string>A tool for IT to create configuration profiles for macOS</string>
+		</dict>
+		<dict>
+			<key>DisplayName</key>
+			<string>Keeper</string>
+			<key>Icon</key>
+			<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/keeper.png</string>
+			<key>Label</key>
+			<string>keeperpasswordmanager</string>
+			<key>Subtitle</key>
+			<string>Password Management for the Business</string>
+		</dict>
+		<dict>
+			<key>DisplayName</key>
+			<string>Keka</string>
+			<key>Icon</key>
+			<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/keka.png</string>
+			<key>Label</key>
+			<string>keka</string>
+			<key>Subtitle</key>
+			<string>The best Archive Utility for macOS</string>
+		</dict>
+		<dict>
+			<key>DisplayName</key>
+			<string>Low Profile</string>
+			<key>Icon</key>
+			<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/lowprofile.png</string>
+			<key>Label</key>
+			<string>lowprofile</string>
+			<key>Subtitle</key>
+			<string>A tool for IT to create configuration profiles for macOS</string>
+		</dict>
+		<dict>
+			<key>DisplayName</key>
+			<string>Microsoft Azure Storage Explorer</string>
+			<key>Icon</key>
+			<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/microsoft-azure-storage-explorer-icon.png</string>
+			<key>Label</key>
+			<string>microsoftazurestorageexplorer</string>
+			<key>Subtitle</key>
+			<string>To explore Azure Storage resources</string>
+		</dict>
+		<dict>
+			<key>DisplayName</key>
+			<string>Microsoft Visual Studio Code</string>
+			<key>Icon</key>
+			<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/vscode.png</string>
+			<key>Label</key>
+			<string>visualstudiocode</string>
+			<key>Subtitle</key>
+			<string>The best Code Editor</string>
+		</dict>
+		<dict>
+			<key>DisplayName</key>
+			<string>Microsoft Visual Studio Code - Insiders</string>
+			<key>Icon</key>
+			<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/Visual_Studio_Code_Insiders_1.36_icon.png</string>
+			<key>Label</key>
+			<string>microsoftvisualstudiocode</string>
+			<key>Subtitle</key>
+			<string>The beta version of the best Code Editor</string>
+		</dict>
+		<dict>
+			<key>DisplayName</key>
+			<string>Nudge</string>
+			<key>Icon</key>
+			<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/NudgeIcon.png</string>
+			<key>Label</key>
+			<string>nudge</string>
+			<key>Subtitle</key>
+			<string>Nudge is a tool provides interactive prompts to users to help keep their machine up to date</string>
+		</dict>
+		<dict>
+			<key>DisplayName</key>
+			<string>Rectangle</string>
+			<key>Icon</key>
+			<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/rectangle.png</string>
+			<key>Label</key>
+			<string>rectangle</string>
+			<key>Subtitle</key>
+			<string>A free and open-source macOS Window Management tool</string>
+		</dict>
+		<dict>
+			<key>DisplayName</key>
+			<string>Slack</string>
+			<key>Icon</key>
+			<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/slack.png</string>
+			<key>Label</key>
+			<string>slack</string>
+			<key>Subtitle</key>
+			<string>Chat and Collaboration platform</string>
+		</dict>
+		<dict>
+			<key>DisplayName</key>
+			<string>SnagIt 2024</string>
+			<key>Icon</key>
+			<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/snagit.png</string>
+			<key>Label</key>
+			<string>snagit2024</string>
+			<key>Subtitle</key>
+			<string>The best Screenshot tool available</string>
+		</dict>
+		<dict>
+			<key>DisplayName</key>
+			<string>Spotify</string>
+			<key>Icon</key>
+			<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/Spotify_icon.png</string>
+			<key>Label</key>
+			<string>spotify</string>
+			<key>Subtitle</key>
+			<string>When you need some music in your work day</string>
+		</dict>
+		<dict>
+			<key>DisplayName</key>
+			<string>VLC</string>
+			<key>Icon</key>
+			<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/VLC_icon.png</string>
+			<key>Label</key>
+			<string>vlc</string>
+			<key>Subtitle</key>
+			<string>A free and open source Video and Audio player</string>
+		</dict>
+		<dict>
+			<key>DisplayName</key>
+			<string>Webex</string>
+			<key>Icon</key>
+			<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/Webex.logo.png</string>
+			<key>Label</key>
+			<string>webex</string>
+			<key>Subtitle</key>
+			<string>For Webex based phone users</string>
+		</dict>
+		<dict>
+			<key>DisplayName</key>
+			<string>Whatsapp</string>
+			<key>Icon</key>
+			<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/whatsapp.png</string>
+			<key>Label</key>
+			<string>whatsapp</string>
+			<key>Subtitle</key>
+			<string>Personal and Business communications platform</string>
+		</dict>
+	</array>
+	<key>InstallomatorSwiftDialogIntegration</key>
+	<true/>
+	<key>ProgressBar</key>
+	<true/>
+	<key>ProgressBarDisplayNames</key>
+	<true/>
+	<key>Restart</key>
+	<false/>
+	<key>Scripts</key>
+	<array>
+		<dict>
+			<key>DisplayName</key>
+			<string>Company Portal</string>
+			<key>Icon</key>
+			<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/CompanyPortal.png</string>
+			<key>ScriptPath</key>
+			<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/scripts/01-installCompanyPortal.zsh</string>
+			<key>Subtitle</key>
+			<string>Installing the Micorosft Intune Company Portal app</string>
+		</dict>
+		<dict>
+			<key>DisplayName</key>
+			<string>Rename Device</string>
+			<key>Icon</key>
+			<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/Settings.png</string>
+			<key>ScriptPath</key>
+			<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/scripts/03-DeviceRename.sh</string>
+			<key>Subtitle</key>
+			<string>Renaming your device</string>
+		</dict>
+		<dict>
+			<key>DisplayName</key>
+			<string>Configure Dock</string>
+			<key>Icon</key>
+			<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/Settings.png</string>
+			<key>ScriptPath</key>
+			<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/scripts/04-dockv5.sh</string>
+			<key>Subtitle</key>
+			<string>Configuring your Dock</string>
+		</dict>
+		<dict>
+			<key>DisplayName</key>
+			<string>Interconnekt Remote Support Agent</string>
+			<key>Icon</key>
+			<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/Interconnekt_Logo.png</string>
+			<key>ScriptPath</key>
+			<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/scripts/05-InstallNinjaOneAgent.sh</string>
+			<key>Subtitle</key>
+			<string>Onboarding your device to Interconnekt's Remote Support app</string>
+		</dict>
+		<dict>
+			<key>DisplayName</key>
+			<string>Microsoft Defender</string>
+			<key>Icon</key>
+			<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/Defender.png</string>
+			<key>ScriptPath</key>
+			<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/scripts/06-installDefender.zsh</string>
+			<key>Subtitle</key>
+			<string>Installing Microsoft Defender and onboarding your device to Microsoft Defender for Business</string>
+		</dict>
+		<dict>
+			<key>DisplayName</key>
+			<string>Show Filename Extensions in Finder</string>
+			<key>Icon</key>
+			<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/Settings.png</string>
+			<key>ScriptPath</key>
+			<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/scripts/30-ShowAllFilenameExtensions.zsh</string>
+			<key>Subtitle</key>
+			<string>Turning on Filename Extensions in Finder</string>
+		</dict>
+		<dict>
+			<key>DisplayName</key>
+			<string>Enable OneDrive Finder Integration</string>
+			<key>Icon</key>
+			<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/Settings.png</string>
+			<key>ScriptPath</key>
+			<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/scripts/31-EnableOneDriveFinderSync.sh</string>
+			<key>Subtitle</key>
+			<string>Ensuring OneDrive Finder integration is enabled</string>
+		</dict>
+		<dict>
+			<key>DisplayName</key>
+			<string>Secure User's Home Folders</string>
+			<key>Icon</key>
+			<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/Settings.png</string>
+			<key>ScriptPath</key>
+			<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/scripts/40-SecureUsersHomeFolders.zsh</string>
+			<key>Subtitle</key>
+			<string>Securing your Home Folder</string>
+		</dict>
+		<dict>
+			<key>DisplayName</key>
+			<string>Enable Apple Mobile File Integrity</string>
+			<key>Icon</key>
+			<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/Settings.png</string>
+			<key>ScriptPath</key>
+			<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/scripts/41-EnableAppleMobileFileIntegrityAMFI.zsh</string>
+			<key>Subtitle</key>
+			<string>Turning on AMFI Setting as per CIS Recommendations</string>
+		</dict>
+		<dict>
+			<key>DisplayName</key>
+			<string>Create IT Admin Account</string>
+			<key>Icon</key>
+			<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/Settings.png</string>
+			<key>ScriptPath</key>
+			<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/scripts/91-createLocalAdminAccount.sh</string>
+			<key>Subtitle</key>
+			<string>Create IT Admin account</string>
+		</dict>
+		<dict>
+			<key>DisplayName</key>
+			<string>Change IT Admin Password</string>
+			<key>Icon</key>
+			<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/Settings.png</string>
+			<key>ScriptPath</key>
+			<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/scripts/92-serialToAdminPassword.sh</string>
+			<key>Subtitle</key>
+			<string>Rotating IT Admin Password</string>
+		</dict>
+		<dict>
+			<key>DisplayName</key>
+			<string>Downgrade User Priveleges to Standard User</string>
+			<key>Icon</key>
+			<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/icons/Settings.png</string>
+			<key>ScriptPath</key>
+			<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/scripts/93-downgradeUsertoStandard.sh</string>
+			<key>Subtitle</key>
+			<string>We will remove Admin Rights from your account to keep you protected from threats</string>
+		</dict>
+	</array>
+</dict>
+</plist>
