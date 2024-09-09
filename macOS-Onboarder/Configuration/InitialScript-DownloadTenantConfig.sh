@@ -34,3 +34,31 @@ if [ $? -ne 0 ]; then
 fi
 
 echo "Successfully downloaded the plist file to $DOWNLOAD_PATH."
+
+# Step 6: Run baseline pointing to the downloaded config file
+BASELINE_COMMAND="/usr/local/Baseline/"  # Replace with the actual command or script to run the baseline
+"$BASELINE_COMMAND" --config "$DOWNLOAD_PATH"
+
+# Check if the baseline command was successful
+if [ $? -ne 0 ]; then
+  echo "Failed to run the baseline with the config file $DOWNLOAD_PATH."
+  exit 1
+fi
+
+echo "Successfully ran the baseline with the config file $DOWNLOAD_PATH."
+
+# Step 4: Determine the URL for the specific plist file based on TENANT
+BASE_URL="https://github.com/joelkino/macOS-Onboarder/raw/main/macOS-Onboarder/Configuration/Tenant-Plists"
+PLIST_URL="$BASE_URL/mIOU-$TENANT.plist"
+
+# Step 5: Download the specific plist file
+DOWNLOAD_PATH="/Library/Preferences/com.secondsonconsulting.baseline.plist"
+curl -o "$DOWNLOAD_PATH" "$PLIST_URL"
+
+# Check if the download was successful
+if [ $? -ne 0 ]; then
+  echo "Failed to download the plist file from $PLIST_URL."
+  exit 1
+fi
+
+echo "Successfully downloaded the plist file to $DOWNLOAD_PATH."
