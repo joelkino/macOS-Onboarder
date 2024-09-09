@@ -53,8 +53,7 @@ TENANT=$(grep -A 1 "\"AccountDisplayName\": \"$ACCOUNT_DISPLAY_NAME\"" "$JSON_FI
 
 # Check if TENANT is empty
 if [ -z "$TENANT" ]; then
-  echo "AccountDisplayName does not match any valid tenants."
-  exit 1
+    TENANT="Generic"
 fi
 
 # Step 3: Determine the URL for the specific plist file based on TENANT
