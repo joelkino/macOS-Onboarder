@@ -24,7 +24,7 @@ BASE_URL="https://github.com/joelkino/macOS-Onboarder/raw/main/macOS-Onboarder/C
 PLIST_URL="$BASE_URL/mIOU-$TENANT.plist"
 
 # Step 5: Download the specific plist file
-DOWNLOAD_PATH="/Library/Preferences/com.secondsonconsulting.baseline.plist"
+DOWNLOAD_PATH="/Library/Managed Preferences/com.secondsonconsulting.baseline.plist"
 curl -o "$DOWNLOAD_PATH" "$PLIST_URL"
 
 # Check if the download was successful
