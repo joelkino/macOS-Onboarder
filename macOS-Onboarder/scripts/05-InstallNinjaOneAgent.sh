@@ -17,7 +17,7 @@ scriptVersion="1.0"
 
 
 # Specify the software name and download URL
-softwarename="interconnektmainoffice3260d4-5.9.1001-installer"
+softwarename="interconnektmainoffice3260d4-5.9.1001-installer.pkg"
 softwarepkgdownloadurl="https://oc.ninjarmm.com/agent/installer/0a2d68ad-8dd6-4719-ad80-fa1da22afba3/interconnektmainoffice3260d4-5.9.1001-installer.pkg"
 
 # Specify the path for temporary storage
