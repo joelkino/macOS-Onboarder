@@ -5,6 +5,15 @@
 	<key>PayloadContent</key>
 	<array>
 		<dict>
+			<key>InitialScripts</key>
+			<array>
+				<dict>
+					<key>DisplayName</key>
+					<string>Download Tenant Config</string>
+					<key>ScriptPath</key>
+					<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/Configuration/InitialScript-DownloadTenantConfig.sh</string>
+				</dict>
+			</array>
 			<key>InstallomatorSwiftDialogIntegration</key>
 			<true/>
 			<key>PayloadDisplayName</key>
@@ -14,7 +23,7 @@
 			<key>PayloadType</key>
 			<string>com.secondsonconsulting.baseline</string>
 			<key>PayloadUUID</key>
-			<string>41CDFFFD-F6E5-4052-B201-EA818288F1EE</string>
+			<string>12509A02-482C-4ED4-BF88-717E8C1C860C</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>ProgressBar</key>
@@ -36,7 +45,7 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>51F59319-EAFB-44B5-A042-D7B8F3AB9956</string>
+	<string>C9ADE571-D06C-44DC-828F-782D85A8B07B</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
 	<key>RemovalDate</key>
