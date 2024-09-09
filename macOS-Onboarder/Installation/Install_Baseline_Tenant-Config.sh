@@ -24,7 +24,9 @@ scriptVersion="1.2"
 
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin
 
-
+######################################################################
+# SECTION 1: Multi-tenant config downloader script
+######################################################################
 ######################################################################
 # Set Variables here
 ######################################################################
@@ -33,10 +35,6 @@ BASEREPO_RAWURL="https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main
 # Constants, logging and caffeinate
 log_message="Baseline install, v$scriptVersion"
 label="Inst-v$scriptVersion"
-
-######################################################################
-# SECTION 1: Multi-tenant config downloader script
-######################################################################
 
 # Step 1: Read the value for AccountDisplayName from com.apple.extensiblesso plist
 PLATFORM_SSO_PLIST="/Library/Managed Preferences/com.apple.extensiblesso.plist"
