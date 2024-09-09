@@ -59,11 +59,39 @@ curl -o "$PLIST_TEMP_PATH" "$PLIST_URL"
 # Move downloaded file to PLIST_PATH
 ##### mv "$PLIST_TEMP_PATH" "$PLIST_PATH"
 
+
+# MARK: Instructions
 ######################################################################
-# SECTION 2: Download and Run Baseline.sh
+# Installation of Baseline
+# Original script was made to install Installomator.
+# - Modified to install Baseline by Sjur Lohne
+#
+# No customization below…
+######################################################################
+# This script can be used to install Baseline directly from GitHub.
+######################################################################
+#
+#  This script made by Søren Theilgaard
+#  https://github.com/Theile
+#  Twitter and MacAdmins Slack: @theilgaard
+#
+#  Some functions and code from Installomator:
+#  https://github.com/Installomator/Installomator
+#
+######################################################################
+scriptVersion="9.7"
+# v.  9.7   : 2022-12-19 : Only kill the caffeinate process we create
+# v.  9.6   : 2022-11-15 : GitHub API call is first, only try alternative if that fails.
+# v.  9.5   : 2022-09-21 : change of GitHub download
+# v.  9.4   : 2022-09-14 : downloadURL can fall back on GitHub API
+# v.  9.3   : 2022-08-29 : Logging changed for current version. Improved installation with looping if it fails, so it can try again. Improved GitHub handling.
+# v.  9.2.2 : 2022-06-17 : Check 1.1.1.1 for internet connection.
+# v.  9.2   : 2022-05-19 : Built in installer for Installlomator. Universal script.
 ######################################################################
 
-# Constants, logging and caffeinate
+export PATH=/usr/bin:/bin:/usr/sbin:/sbin
+
+# MARK: Constants, logging and caffeinate
 log_message="Baseline install, v$scriptVersion"
 label="Inst-v$scriptVersion"
 
@@ -87,7 +115,7 @@ caffexit () {
     exit $1
 }
 
-# Install Baseline
+# MARK: Install Baseline
 name="Baseline"
 printlog "$name check for installation"
 # download URL, version and Expected Team ID
@@ -131,7 +159,7 @@ if [[ ! -e "${destFile}" || "$currentInstalledVersion" != "$appNewVersion" ]]; t
             printlog "${curlDownload}"
             exitCode=1
         else
-            printlog "Downloaded $name successfully."
+            printlog "Download $name succes."
             # Verify the download
             teamID=$(spctl -a -vv -t install "$tmpDir/$name.pkg" 2>&1 | awk '/origin=/ {print $NF }' | tr -d '()' || true)
             printlog "Team ID for downloaded package: $teamID"
@@ -145,7 +173,7 @@ if [[ ! -e "${destFile}" || "$currentInstalledVersion" != "$appNewVersion" ]]; t
                     printlog "${pkgInstall}"
                     exitCode=2
                 else
-                    printlog "Installing $name package successful."
+                    printlog "Installing $name package succes."
                     exitCode=0
                 fi
             else
@@ -162,7 +190,7 @@ if [[ ! -e "${destFile}" || "$currentInstalledVersion" != "$appNewVersion" ]]; t
                 sleep 2
             fi
         else
-            printlog "Download and install of $name successful."
+            printlog "Download and install of $name succes."
         fi
     done
     # Remove the temporary working directory
@@ -180,8 +208,3 @@ else
 fi
 
 caffexit 0
-
-# Run Baseline from default location but points to downloaded plist file
-/usr/local/Baseline/Baseline.sh --config "$PLIST_PATH"
-
-######################################################################
