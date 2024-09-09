@@ -39,39 +39,40 @@ label="Inst-v$scriptVersion"
 # Step 1: Read the value for AccountDisplayName from com.apple.extensiblesso plist
 PLATFORM_SSO_PLIST="/Library/Managed Preferences/com.apple.extensiblesso.plist"
 
+# Check if the plist file exists
+if [ ! -f "$PLATFORM_SSO_PLIST" ]; then
+  echo "Error: $PLATFORM_SSO_PLIST not found."
+fi
+
 # Read the PlatformSSO array from the plist file
-platform_sso=$(defaults read "$PLATFORM_SSO_PLIST" PlatformSSO)
+platform_sso=$(defaults read "$PLATFORM_SSO_PLIST" PlatformSSO 2>/dev/null)
+
+# Check if the read operation was successful
+if [ $? -ne 0 ]; then
+  echo "Error: Unable to read PlatformSSO from $PLATFORM_SSO_PLIST"
+fi
 
 # Convert the plist output to XML format and extract AccountDisplayName
-ACCOUNT_DISPLAY_NAME=$(echo "$platform_sso" | plutil -convert xml1 -o - - | xmllint --xpath "string(//key[.='AccountDisplayName']/following-sibling::string[1])" -)
+ACCOUNT_DISPLAY_NAME=$(echo "$platform_sso" | plutil -convert xml1 -o - - 2>/dev/null | xmllint --xpath "string(//key[.='AccountDisplayName']/following-sibling::string[1])" - 2>/dev/null)
 
+# Check if the extraction was successful
+if [ $? -ne 0 ]; then
+  echo "Error: Unable to extract AccountDisplayName"
+fi
+
+# Output the AccountDisplayName
 echo "AccountDisplayName: $ACCOUNT_DISPLAY_NAME"
 
-# Step 2: Compare AccountDisplayName against the JSON entries
-## Set the path for JSON_FILE
-JSON_FILE="$BASEREPO_RAWURL/Configuration/Tenant-Plists/Tenant-Matching-List.json"
-TENANT=$(grep -A 1 "\"AccountDisplayName\": \"$ACCOUNT_DISPLAY_NAME\"" "$JSON_FILE" | grep "TenantName" | awk -F ': ' '{print $2}' | tr -d '",')
+# Step 2: Determine the URL for the specific plist file based on TENANT
+BASE_URL="https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/Configuration/Tenant-Plists"
+PLIST_URL="$BASE_URL/$ACCOUNT_DISPLAY_NAME.plist"
+PLIST_PATH="/Library/Managed Preferences/$ACCOUNT_DISPLAY_NAME.plist"
+PLIST_TEMP_PATH="/Users/joel/Downloads/$ACCOUNT_DISPLAY_NAME.plist"
+# Download the plist file``
+curl -o "$PLIST_TEMP_PATH" "$PLIST_URL"
 
-# Check if TENANT is empty
-if [ -z "$TENANT" ]; then
-    TENANT="Generic"
-fi
-
-# Step 3: Determine the URL for the specific plist file based on TENANT
-BASE_URL="$BASEREPO_RAWURL/Configuration/Tenant-Plists"
-PLIST_URL="$BASE_URL/$TENANT.plist"
-
-# Step 5: Download the specific plist file
-DOWNLOAD_PATH="/Library/Managed Preferences/com.secondsonconsulting.baseline.plist"
-curl -o "$DOWNLOAD_PATH" "$PLIST_URL"
-
-# Check if the download was successful
-if [ $? -ne 0 ]; then
-  echo "Failed to download the plist file from $PLIST_URL."
-  exit 1
-fi
-
-echo "Successfully downloaded the plist file to $DOWNLOAD_PATH."
+# Move downloaded file to PLIST_PATH
+mv "$PLIST_TEMP_PATH" "$PLIST_PATH"
 
 ######################################################################
 # SECTION 2: Download and Run Baseline.sh
@@ -101,7 +102,7 @@ caffexit () {
     exit $1
 }
 
-# MARK: Install Baseline
+# Install Baseline
 name="Baseline"
 printlog "$name check for installation"
 # download URL, version and Expected Team ID
@@ -145,7 +146,7 @@ if [[ ! -e "${destFile}" || "$currentInstalledVersion" != "$appNewVersion" ]]; t
             printlog "${curlDownload}"
             exitCode=1
         else
-            printlog "Download $name succes."
+            printlog "Downloaded $name successfully."
             # Verify the download
             teamID=$(spctl -a -vv -t install "$tmpDir/$name.pkg" 2>&1 | awk '/origin=/ {print $NF }' | tr -d '()' || true)
             printlog "Team ID for downloaded package: $teamID"
@@ -159,7 +160,7 @@ if [[ ! -e "${destFile}" || "$currentInstalledVersion" != "$appNewVersion" ]]; t
                     printlog "${pkgInstall}"
                     exitCode=2
                 else
-                    printlog "Installing $name package succes."
+                    printlog "Installing $name package successful."
                     exitCode=0
                 fi
             else
