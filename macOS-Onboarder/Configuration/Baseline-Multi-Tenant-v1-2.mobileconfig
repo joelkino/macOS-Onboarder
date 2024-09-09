@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>CleanupAfterUse</key>
+			<false/>
+			<key>InitialScripts</key>
+			<array>
+				<dict>
+					<key>DisplayName</key>
+					<string>Download Tenant Config</string>
+					<key>ScriptPath</key>
+					<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/Configuration/InitialScript-DownloadTenantConfig.sh</string>
+				</dict>
+			</array>
+			<key>InstallomatorSwiftDialogIntegration</key>
+			<true/>
+			<key>PayloadDisplayName</key>
+			<string>Baseline</string>
+			<key>PayloadIdentifier</key>
+			<string>com.secondsonconsulting.baseline.AA20B1D9-1CD6-4CCF-8477-242539BE8741</string>
+			<key>PayloadType</key>
+			<string>com.secondsonconsulting.baseline</string>
+			<key>PayloadUUID</key>
+			<string>B098ABA2-0DF5-446D-8C42-EC76959E68AC</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>ProgressBar</key>
+			<true/>
+			<key>ProgressBarDisplayNames</key>
+			<true/>
+			<key>Restart</key>
+			<false/>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>macOS Intune Onboarding Utility - Multi-tenant v1</string>
+	<key>PayloadDisplayName</key>
+	<string>macOS Intune Onboarding Utility - Multi-tenant v1</string>
+	<key>PayloadIdentifier</key>
+	<string>Baseline-Multi-Tenant-v-1</string>
+	<key>PayloadOrganization</key>
+	<string>Interconnekt</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>8E3CCE91-8C50-42FA-8AEF-C5543236E310</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+	<key>RemovalDate</key>
+	<date>2098-12-31T15:37:24Z</date>
+</dict>
+</plist>
