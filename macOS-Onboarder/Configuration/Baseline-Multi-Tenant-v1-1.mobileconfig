@@ -5,6 +5,8 @@
 	<key>PayloadContent</key>
 	<array>
 		<dict>
+			<key>CleanupAfterUse</key>
+			<false/>
 			<key>InitialScripts</key>
 			<array>
 				<dict>
@@ -23,7 +25,7 @@
 			<key>PayloadType</key>
 			<string>com.secondsonconsulting.baseline</string>
 			<key>PayloadUUID</key>
-			<string>3298B775-007D-4C8D-92BB-E0AA62BEA2ED</string>
+			<string>08712CB0-B93D-4828-AFE2-C2D06620A4C5</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>ProgressBar</key>
@@ -45,7 +47,7 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>220B2CA3-3F26-4583-A6F5-972846D6BEC2</string>
+	<string>E9299C3C-656F-44CD-97A9-833116F75280</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
 	<key>RemovalDate</key>
