@@ -11,6 +11,8 @@ if [ -z "$AccountDisplayName" ]; then
 fi
 
 # Step 2: Compare AccountDisplayName against the JSON entries
+## Set the path for JSON_FILE
+JSON_FILE="https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/Configuration/Tenant-Plists/mIOU-Tenant-Matching-List.json"
 TENANT=$(grep -A 1 "\"AccountDisplayName\": \"$ACCOUNT_DISPLAY_NAME\"" "$JSON_FILE" | grep "ShortName" | awk -F ': ' '{print $2}' | tr -d '",')
 
 # Check if TENANT is empty
