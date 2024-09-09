@@ -11,7 +11,7 @@
 					<key>DisplayName</key>
 					<string>Download Tenant Config</string>
 					<key>ScriptPath</key>
-					<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/Configuration/InitialScript-DownloadTenantConfig.sh</string>
+					<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/raw/macOS-Onboarder/Configuration/InitialScript-DownloadTenantConfig.sh</string>
 				</dict>
 			</array>
 			<key>InstallomatorSwiftDialogIntegration</key>
