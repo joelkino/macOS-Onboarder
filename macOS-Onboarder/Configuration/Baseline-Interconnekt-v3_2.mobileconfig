@@ -9,11 +9,11 @@
 			<string>--titlefont "size=25" \
 --bannerimage "https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/Banner/Banner.png" \
 --bannerheight 130 \
---bannertitle "⚠️  Onboarding Completed, but with Errors  ⚠️" \
+--bannertitle "Onboarding Completed, but with Errors" \
 --messagefont "size=14" \
 --message "Please contact IT Support on 1300 852 842 for further assistance." \
 --iconsize 100 \
---alignment center
+--alignment center \
 --width 1050</string>
 			<key>DialogListOptions</key>
 			<string>--liststyle compact \
@@ -31,11 +31,11 @@
 			<string>--titlefont "size=25" \
 --bannerimage "https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/Banner/Banner.png" \
 --bannerheight 130 \
---bannertitle "✅  Onboarding Complete!  ✅" \
+--bannertitle "Onboarding Complete!" \
 --messagefont "size=14" \
 --message "Thank you for waiting. Your device is now ready for use." \
 --iconsize 100 \
---alignment center
+--alignment center \
 --width 1050</string>
 			<key>ExitCondition</key>
 			<string>/Applications/Company Portal.app</string>
