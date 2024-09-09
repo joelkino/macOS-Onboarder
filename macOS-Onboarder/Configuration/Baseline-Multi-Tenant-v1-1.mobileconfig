@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>InstallomatorSwiftDialogIntegration</key>
+			<true/>
+			<key>PayloadDisplayName</key>
+			<string>Baseline</string>
+			<key>PayloadIdentifier</key>
+			<string>com.secondsonconsulting.baseline.AA20B1D9-1CD6-4CCF-8477-242539BE8741</string>
+			<key>PayloadType</key>
+			<string>com.secondsonconsulting.baseline</string>
+			<key>PayloadUUID</key>
+			<string>41CDFFFD-F6E5-4052-B201-EA818288F1EE</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>ProgressBar</key>
+			<true/>
+			<key>ProgressBarDisplayNames</key>
+			<true/>
+			<key>Restart</key>
+			<false/>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>This configures the Interconnekt macOS Onboarder - Baseline Configuration</string>
+	<key>PayloadDisplayName</key>
+	<string>macOS Intune Onboarding Utility - Baseline Configuration</string>
+	<key>PayloadIdentifier</key>
+	<string>Baseline-Interconnekt-v3_2</string>
+	<key>PayloadOrganization</key>
+	<string>Interconnekt</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>51F59319-EAFB-44B5-A042-D7B8F3AB9956</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+	<key>RemovalDate</key>
+	<date>2098-12-31T15:37:24Z</date>
+</dict>
+</plist>
