@@ -39,26 +39,11 @@ label="Inst-v$scriptVersion"
 # Step 1: Read the value for AccountDisplayName from com.apple.extensiblesso plist
 PLATFORM_SSO_PLIST="/Library/Managed Preferences/com.apple.extensiblesso.plist"
 
-# Check if the plist file exists
-if [ ! -f "$PLATFORM_SSO_PLIST" ]; then
-  echo "Error: $PLATFORM_SSO_PLIST not found."
-fi
-
 # Read the PlatformSSO array from the plist file
 platform_sso=$(defaults read "$PLATFORM_SSO_PLIST" PlatformSSO 2>/dev/null)
 
-# Check if the read operation was successful
-if [ $? -ne 0 ]; then
-  echo "Error: Unable to read PlatformSSO from $PLATFORM_SSO_PLIST"
-fi
-
 # Convert the plist output to XML format and extract AccountDisplayName
 ACCOUNT_DISPLAY_NAME=$(echo "$platform_sso" | plutil -convert xml1 -o - - 2>/dev/null | xmllint --xpath "string(//key[.='AccountDisplayName']/following-sibling::string[1])" - 2>/dev/null)
-
-# Check if the extraction was successful
-if [ $? -ne 0 ]; then
-  echo "Error: Unable to extract AccountDisplayName"
-fi
 
 # Output the AccountDisplayName
 echo "AccountDisplayName: $ACCOUNT_DISPLAY_NAME"
@@ -72,7 +57,7 @@ PLIST_TEMP_PATH="/Users/joel/Downloads/$ACCOUNT_DISPLAY_NAME.plist"
 curl -o "$PLIST_TEMP_PATH" "$PLIST_URL"
 
 # Move downloaded file to PLIST_PATH
-mv "$PLIST_TEMP_PATH" "$PLIST_PATH"
+##### mv "$PLIST_TEMP_PATH" "$PLIST_PATH"
 
 ######################################################################
 # SECTION 2: Download and Run Baseline.sh
@@ -195,5 +180,8 @@ else
 fi
 
 caffexit 0
+
+# Run Baseline from default location but points to downloaded plist file
+/usr/local/Baseline/Baseline.sh --config "$PLIST_PATH"
 
 ######################################################################
