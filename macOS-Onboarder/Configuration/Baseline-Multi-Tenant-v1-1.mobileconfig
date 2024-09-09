@@ -23,7 +23,7 @@
 			<key>PayloadType</key>
 			<string>com.secondsonconsulting.baseline</string>
 			<key>PayloadUUID</key>
-			<string>12509A02-482C-4ED4-BF88-717E8C1C860C</string>
+			<string>3298B775-007D-4C8D-92BB-E0AA62BEA2ED</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>ProgressBar</key>
@@ -35,17 +35,17 @@
 		</dict>
 	</array>
 	<key>PayloadDescription</key>
-	<string>This configures the Interconnekt macOS Onboarder - Baseline Configuration</string>
+	<string>macOS Intune Onboarding Utility - Multi-tenant v1</string>
 	<key>PayloadDisplayName</key>
-	<string>macOS Intune Onboarding Utility - Baseline Configuration</string>
+	<string>macOS Intune Onboarding Utility - Multi-tenant v1</string>
 	<key>PayloadIdentifier</key>
-	<string>Baseline-Interconnekt-v3_2</string>
+	<string>Baseline-Multi-Tenant-v-1</string>
 	<key>PayloadOrganization</key>
 	<string>Interconnekt</string>
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>C9ADE571-D06C-44DC-828F-782D85A8B07B</string>
+	<string>220B2CA3-3F26-4583-A6F5-972846D6BEC2</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
 	<key>RemovalDate</key>
