@@ -48,3 +48,15 @@ if [ $? -ne 0 ]; then
 fi
 
 echo "Successfully ran the baseline with the config file $DOWNLOAD_PATH."
+
+# Terminate the baseline session
+TERMINATE_COMMAND="$BASELINE_COMMAND"  # Replace with the actual command to terminate the baseline session
+"$TERMINATE_COMMAND"
+
+# Check if the termination command was successful
+if [ $? -ne 0 ]; then
+  echo "Failed to terminate the baseline session."
+  exit 1
+fi
+
+echo "Successfully terminated the baseline session."
