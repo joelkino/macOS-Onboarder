@@ -2,8 +2,7 @@
 #set -x
 ############################################################################################
 ##
-## Script to delete Guest Home Folder
-## Original Location: https://github.com/microsoft/shell-intune-samples/blob/master/macOS/Config/Delete%20Guest%20Home%20Folder/DeleteGuestHomeFolder.zsh
+## Script to disable Printer Sharing
 ##
 ############################################################################################
 
@@ -18,7 +17,7 @@
 ## Feedback: neiljohn@microsoft.com
 
 # Define variables
-appname="DeleteGuestHomeFolder"
+appname="DisablePrinterSharing"
 logandmetadir="/Library/Logs/Microsoft/IntuneScripts/$appname"
 log="$logandmetadir/$appname.log"
 
@@ -32,10 +31,10 @@ else
     mkdir -p $logandmetadir
 fi
 
-# Delete Guest Home Folder
-DeleteGuestHomeFolder() {
-/bin/rm -R /Users/Guest 2> /dev/null
-echo "$(date) | Guest Home Folder is deleted or already deleted. Closing script..."
+# Disables Printer Sharing
+DisablePrinterSharing() {
+/usr/sbin/cupsctl --no-share-printers
+echo  "$(date) | Printer Sharing is disabled or already disabled. Closing script..." 
 }
 
 # Start logging
@@ -49,4 +48,4 @@ echo "############################################################"
 echo ""
 
 # Run function
-DeleteGuestHomeFolder
+DisablePrinterSharing
