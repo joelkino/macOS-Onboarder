@@ -162,10 +162,12 @@ configure_dock_via_plist () {
 
   echo "$(date) | Adding Downloads Display as Stack"
   downloadfolder="${userHome}/Downloads"
-  run_as_user defaults write com.apple.dock persistent-others -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>$downloadfolder</string><key>_CFURLStringType</key><integer>0</integer></dict><key>file-label</key><string>Downloads</string><key>file-type</key><string>2</string></dict><key>tile-type</key><string>directory-tile</string></dict>"
+  run_as_user defaults write com.apple.dock persistent-others -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>$downloadfolder</string><key>_CFURLStringType</key><integer>0</integer></dict><key>file-label</key><string>Downloads</string><key>file-type</key><integer>2</integer></dict><key>tile-type</key><string>directory-tile</string></dict>"
+  run_as_user defaults write com.apple.dock persistent-others -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>$downloadfolder</string><key>_CFURLStringType</key><integer>0</integer></dict><key>file-label</key><string>Downloads</string><key>file-type</key><integer>2</integer></dict><key>tile-type</key><string>directory-tile</string><key>view-type</key><string>2</string></dict>"
 
   echo "$(date) | Enabling Magnification"
   defaults write com.apple.dock magnification -boolean YES
+  defaults write com.apple.dock largesize -int 128
 
   #echo "$(date) | Enable Dim Hidden Apps in Dock"
   #defaults write com.apple.dock showhidden -bool true
