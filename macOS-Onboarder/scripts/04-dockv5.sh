@@ -60,6 +60,8 @@ dockapps=(  "/System/Applications/Launchpad.app"
             "/Applications/Microsoft OneNote.app"
             "/Applications/Microsoft Teams.app"
             "/Library/Application Support/Microsoft/MAU2.0/Microsoft AutoUpdate.app"
+            "/Applications/Keeper Password Manager.app"
+            "/Applications/VLC.app"
             "/System/Applications/App Store.app"
             "/System/Applications/$settingsApp")
 
