@@ -45,11 +45,11 @@ defaultAccountKey="eaed94403c8c8af15df298794ad28d37"
 
 # If you have a preferred "placeholder" organization name for Mac agents, you can set that below.
 # Otherwise, provide the appropriate Organization Key when running the script in your RMM.
-defaultOrgKey="interconnekt"
+defaultOrgKey="ida"
 
 # Put the name of your RMM below. This helps our support team understand which RMM tools
 # are being used to deploy the Huntress macOS Agent. Simply replace the text in quotes below.
-rmm="Intune and CW Automate RMM"
+rmm="Intune and Ninja RMM"
 
 # Option to install the system extension after the Huntress Agent is installed. In order for this to happen
 # without security prompts on the endpoint, permissions need to be applied to the endpoint by an MDM before this script

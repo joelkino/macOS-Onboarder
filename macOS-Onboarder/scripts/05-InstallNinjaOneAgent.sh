@@ -17,8 +17,8 @@ scriptVersion="1.0"
 
 
 # Specify the software name and download URL
-softwarename="interconnektmainoffice3260d4-5.9.1001-installer.pkg"
-softwarepkgdownloadurl="https://oc.ninjarmm.com/agent/installer/0a2d68ad-8dd6-4719-ad80-fa1da22afba3/interconnektmainoffice3260d4-5.9.1001-installer.pkg"
+softwarename="NinjaOne-Agent_73b41b6d-c255-4e8d-b450-3924efffd9d2-IDA-Main-Auto.pkg"
+softwarepkgdownloadurl="https://oc.ninjarmm.com/agent/installer/73b41b6d-c255-4e8d-b450-3924efffd9d2/8.0.3261/NinjaOne-Agent_73b41b6d-c255-4e8d-b450-3924efffd9d2-IDA-Main-Auto.pkg"
 
 # Specify the path for temporary storage
 temp_dir="/tmp"

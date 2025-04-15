@@ -34,8 +34,6 @@ waitForTheseApps=(  "/Applications/Microsoft Edge.app"
                     "/Applications/Microsoft PowerPoint.app"
                     "/Applications/Microsoft OneNote.app"
                     "/Applications/Microsoft Teams.app"
-                    "/Applications/Visual Studio Code.app"
-                    "/Applications/Microsoft Remote Desktop.app"
                     "/Applications/Company Portal.app")
 
 # Generated variables
