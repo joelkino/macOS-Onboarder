@@ -22,7 +22,7 @@
 appname="Device Rename"
 logandmetadir="/Library/Logs/Microsoft/Intune/Scripts/$appname"
 log="$logandmetadir/$appname.log"
-CompanyCode="IC"
+CompanyCode="IDA"
 
 ## Check if the log directory has been created
 if [ -d $logandmetadir ]; then
