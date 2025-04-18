@@ -26,7 +26,7 @@
 ## WARNING: This script could leave your Mac will no Admin accounts configured at all
 
 # Define variables
-useraccount="itadmin"   ## Change the name of the Admin Account that you wish to be bypassed from the downgrading process (ie remains Adminstrator)
+useraccount="interconnekt"   ## Change the name of the Admin Account that you wish to be bypassed from the downgrading process (ie remains Adminstrator)
 scriptname="Downgrade Admin Users to Standard"
 log="/var/log/downgradeadminusers.log"
 abmcheck=false   # Only downgrade users if this device is ABM managed ### Have set this to false as it was not working when true even on ABM managed devices
