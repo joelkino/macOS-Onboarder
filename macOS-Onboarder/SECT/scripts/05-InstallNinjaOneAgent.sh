@@ -17,8 +17,8 @@ scriptVersion="1.0"
 
 
 # Specify the software name and download URL
-softwarename="NinjaOne-Agent_73b41b6d-c255-4e8d-b450-3924efffd9d2-IDA-Main-Auto.pkg"
-softwarepkgdownloadurl="https://oc.ninjarmm.com/agent/installer/73b41b6d-c255-4e8d-b450-3924efffd9d2/8.0.3261/NinjaOne-Agent_73b41b6d-c255-4e8d-b450-3924efffd9d2-IDA-Main-Auto.pkg"
+softwarename="NinjaOne-Agent_5e4ce6ee-ace2-4451-9bd8-f0d1ca9fa69e-SecuredTechnology-Main-Auto.pkg"
+softwarepkgdownloadurl="https://oc.ninjarmm.com/agent/installer/5e4ce6ee-ace2-4451-9bd8-f0d1ca9fa69e/10.0.4516/NinjaOne-Agent_5e4ce6ee-ace2-4451-9bd8-f0d1ca9fa69e-SecuredTechnology-Main-Auto.pkg"
 
 # Specify the path for temporary storage
 temp_dir="/tmp"
