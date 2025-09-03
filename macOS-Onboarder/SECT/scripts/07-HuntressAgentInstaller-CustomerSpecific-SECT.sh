@@ -45,7 +45,7 @@ defaultAccountKey="eaed94403c8c8af15df298794ad28d37"
 
 # If you have a preferred "placeholder" organization name for Mac agents, you can set that below.
 # Otherwise, provide the appropriate Organization Key when running the script in your RMM.
-defaultOrgKey="ida"
+defaultOrgKey="securedtechnology"
 
 # Put the name of your RMM below. This helps our support team understand which RMM tools
 # are being used to deploy the Huntress macOS Agent. Simply replace the text in quotes below.
