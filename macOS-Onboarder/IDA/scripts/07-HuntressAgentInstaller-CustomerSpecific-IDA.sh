@@ -41,11 +41,11 @@
 
 
 # Replace __ACCOUNT_KEY__ with your account secret key (from your Huntress portal's "download agent" section)
-defaultAccountKey="eaed94403c8c8af15df298794ad28d37"
+defaultAccountKey=""
 
 # If you have a preferred "placeholder" organization name for Mac agents, you can set that below.
 # Otherwise, provide the appropriate Organization Key when running the script in your RMM.
-defaultOrgKey="ida"
+defaultOrgKey=""
 
 # Put the name of your RMM below. This helps our support team understand which RMM tools
 # are being used to deploy the Huntress macOS Agent. Simply replace the text in quotes below.
