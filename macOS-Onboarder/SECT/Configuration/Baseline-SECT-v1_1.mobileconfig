@@ -422,36 +422,6 @@
 					<key>Subtitle</key>
 					<string>Disabling Remote Management</string>
 				</dict>
-				<dict>
-					<key>DisplayName</key>
-					<string>Create IT Admin Account</string>
-					<key>Icon</key>
-					<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/SECT/icons/Settings.png</string>
-					<key>ScriptPath</key>
-					<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/SECT/scripts/91-createLocalAdminAccount.sh</string>
-					<key>Subtitle</key>
-					<string>Create IT Admin account</string>
-				</dict>
-				<dict>
-					<key>DisplayName</key>
-					<string>Change IT Admin Password</string>
-					<key>Icon</key>
-					<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/SECT/icons/Settings.png</string>
-					<key>ScriptPath</key>
-					<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/SECT/scripts/92-serialToAdminPassword.sh</string>
-					<key>Subtitle</key>
-					<string>Rotating IT Admin Password</string>
-				</dict>
-				<dict>
-					<key>DisplayName</key>
-					<string>Downgrade User Priveleges to Standard User</string>
-					<key>Icon</key>
-					<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/SECT/icons/Settings.png</string>
-					<key>ScriptPath</key>
-					<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/SECT/scripts/93-downgradeUsertoStandard.sh</string>
-					<key>Subtitle</key>
-					<string>We will remove Admin Rights from your account to keep you protected from threats</string>
-				</dict>
 			</array>
 		</dict>
 	</array>
