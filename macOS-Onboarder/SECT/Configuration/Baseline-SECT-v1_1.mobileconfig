@@ -57,7 +57,7 @@
 					<key>Icon</key>
 					<string>https://raw.githubusercontent.com/joelkino/macOS-Onboarder/main/macOS-Onboarder/SECT/icons/office.png</string>
 					<key>Label</key>
-					<string>microsoftofficebusinesspro</string>
+					<string>microsoftoffice365</string>
 					<key>Subtitle</key>
 					<string>Microsoft Office is your business productivity suite</string>
 				</dict>
